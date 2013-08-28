@@ -18,6 +18,9 @@ import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JList;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JSpinner;
@@ -76,6 +79,27 @@ public class MainGUI extends JFrame {
 		setTitle("Saad Folder Utilities");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 600);
+		
+		JMenuBar menuBar = new JMenuBar();
+		setJMenuBar(menuBar);
+		
+		JMenu mnFile = new JMenu("File");
+		menuBar.add(mnFile);
+		
+		JMenuItem mntmRestart = new JMenuItem("Restart");
+		mnFile.add(mntmRestart);
+		
+		JMenuItem mntmExit = new JMenuItem("Exit");
+		mnFile.add(mntmExit);
+		
+		JMenu mnLanguage = new JMenu("Language");
+		menuBar.add(mnLanguage);
+		
+		JMenuItem mntmEnglish = new JMenuItem("English");
+		mnLanguage.add(mntmEnglish);
+		
+		JMenuItem mntmFrancais = new JMenuItem("Francais");
+		mnLanguage.add(mntmFrancais);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
